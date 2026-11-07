@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motivaciones para Emprender | GEM Ecuador 2025 - Grupo 2</title>
+  <meta name="description" content="Diseño y Evaluación de Proyectos · Esquema del informe GEM Ecuador 2025 y de la encuesta de capacitación para emprendedores. Grupo 2.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            editorial: ['"Lora"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FAF9F6;
+      color: #1E293B;
+    }
+    .font-editorial {
+      font-family: 'Lora', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+    @media print {
+      header, .no-print {
+        display: none !important;
+      }
+      body {
+        background: #fff !important;
+      }
+    }
+  </style>
+</head>
+<body class="selection:bg-purple-200 selection:text-purple-900 antialiased min-h-screen flex flex-col">
+
+  <!-- Scroll Progress Indicator -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-slate-100 z-50">
+    <div id="progressBar" class="h-full bg-gradient-to-r from-rose-300 via-amber-200 to-purple-400 w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-rose-100/70 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-4 h-16">
+        <!-- Brand -->
+        <div class="flex items-center gap-2 shrink-0">
+          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-rose-200 via-purple-100 to-sky-200 flex items-center justify-center text-slate-800 font-bold text-sm shadow-xs">
+            G2
+          </span>
+          <a href="#" class="text-base sm:text-lg font-bold tracking-tight text-slate-900 whitespace-nowrap hover:text-purple-700 transition-colors">
+            GEM Ecuador 2025
+          </a>
+          <span class="hidden sm:inline-block text-xs px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200/60 font-medium">
+            Grupo 2
+          </span>
+        </div>
+
+        <!-- Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-xs xl:text-sm font-medium text-slate-600">
+          <a href="#s1" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Datos 2025</a>
+          <a href="#s3" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Motivaciones</a>
+          <a href="#s4" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Evolución</a>
+          <a href="#s5" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Etapas TEA</a>
+          <a href="#s6" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Edades</a>
+          <a href="#s7" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Caso Real</a>
+          <a href="#s12" class="px-2.5 py-1.5 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors">Encuesta</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="/Motivaciones-GEM-Ecuador-2025.html" download="Motivaciones-GEM-Ecuador-2025.html" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-emerald-900 bg-emerald-100 hover:bg-emerald-200 border border-emerald-200 rounded-lg shadow-2xs transition-colors whitespace-nowrap">
+            <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span class="hidden sm:inline">Descargar HTML</span>
+          </a>
+
+          <button onclick="openPresentationModal()" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-purple-900 bg-purple-100/90 hover:bg-purple-200 border border-purple-200 rounded-lg shadow-xs transition-colors whitespace-nowrap">
+            <svg class="w-3.5 h-3.5 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+            <span>Presentar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-8 pb-12 sm:pt-12 sm:pb-16 bg-gradient-to-b from-[#FFF5F5] via-[#F8F7FF] to-[#FAF9F6] border-b border-rose-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center space-y-4">
+        <div class="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-slate-500 font-medium">
+          <span>Diseño y Evaluación de Proyectos</span>
+          <span aria-hidden="true">·</span>
+          <span>GEM Ecuador 2025</span>
+          <span aria-hidden="true">·</span>
+          <span class="text-purple-700 font-semibold">Grupo 2</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 font-editorial" style="text-wrap: balance;">
+          Motivaciones para emprender
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Diseño y Evaluación de Proyectos · Esquema del informe GEM Ecuador 2025 y de la encuesta de capacitación
+        </p>
+
+        <!-- Authors Box -->
+        <div class="inline-flex flex-col sm:flex-row items-center gap-2 p-3 sm:px-5 sm:py-2.5 rounded-2xl bg-white/80 border border-purple-100 shadow-xs backdrop-blur-xs text-xs sm:text-sm text-slate-700 text-center">
+          <div class="flex items-center gap-1.5 text-purple-800 font-semibold shrink-0">
+            <strong>Grupo 2:</strong>
+          </div>
+          <div class="flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-slate-600">
+            <span>Geovanna Loor ·</span>
+            <span>Eliannys Carrillo ·</span>
+            <span>Dester Maliza ·</span>
+            <span>Maverick Plazarte ·</span>
+            <span>Alisson Robles ·</span>
+            <span>Annette Valeriano ·</span>
+            <span>Noemi Yautibug</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <a href="#s1" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all shadow-sm">
+            Explorar Datos 2025 ↓
+          </a>
+          <a href="#s12" class="px-5 py-2.5 rounded-xl bg-emerald-100/80 hover:bg-emerald-200/90 text-emerald-900 border border-emerald-200 font-medium text-sm transition-all shadow-xs">
+            Probar Encuesta Interactiva (12 Preguntas)
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Pastel KPI Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+        <div class="p-5 rounded-2xl bg-[#FFF1F2] border border-rose-200/80 shadow-xs">
+          <div class="flex items-center justify-between text-xs text-rose-800 font-semibold mb-2">
+            <span>TEA ECUADOR 2025</span>
+            <span class="px-2 py-0.5 rounded-md bg-rose-200/60 text-rose-900 text-[11px] font-bold">+9,15 vs Región</span>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 tabular-nums">91,50 %</div>
+          <div class="text-sm font-semibold text-rose-950 mt-1">Ganarse la vida (necesidad)</div>
+          <p class="text-xs text-rose-800/80 mt-1">La cifra más alta de la región (82,35 % regional). Principal detonante.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#FEF3C7] border border-amber-200/80 shadow-xs">
+          <div class="flex items-center justify-between text-xs text-amber-800 font-semibold mb-2">
+            <span>TEA ECUADOR 2025</span>
+            <span class="px-2 py-0.5 rounded-md bg-amber-200/60 text-amber-900 text-[11px] font-bold">+0,06 vs Región</span>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 tabular-nums">59,23 %</div>
+          <div class="text-sm font-semibold text-amber-950 mt-1">Generar gran riqueza</div>
+          <p class="text-xs text-amber-800/80 mt-1">Prácticamente idéntico al 59,17 % regional. Aspiración de rentabilidad.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#E0F2FE] border border-sky-200/80 shadow-xs">
+          <div class="flex items-center justify-between text-xs text-sky-800 font-semibold mb-2">
+            <span>TEA ECUADOR 2025</span>
+            <span class="px-2 py-0.5 rounded-md bg-sky-200/60 text-sky-900 text-[11px] font-bold">−7,26 vs Región</span>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 tabular-nums">51,14 %</div>
+          <div class="text-sm font-semibold text-sky-950 mt-1">Marcar la diferencia</div>
+          <p class="text-xs text-sky-800/80 mt-1">Por debajo del 58,40 % regional. Se prioriza funcionalidad económica.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#F3E8FF] border border-purple-200/80 shadow-xs">
+          <div class="flex items-center justify-between text-xs text-purple-800 font-semibold mb-2">
+            <span>TEA ECUADOR 2025</span>
+            <span class="px-2 py-0.5 rounded-md bg-purple-200/60 text-purple-900 text-[11px] font-bold">+4,03 vs Región</span>
+          </div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 tabular-nums">43,11 %</div>
+          <div class="text-sm font-semibold text-purple-950 mt-1">Tradición familiar</div>
+          <p class="text-xs text-purple-800/80 mt-1">Supera al 39,08 % regional. Refugio en modelos de legado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Body Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20 flex-1">
+
+    <!-- Section 1 -->
+    <section id="s1" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 1</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          1. Datos principales de 2025 (Figura 12, p. 27)
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+        <table class="w-full text-left border-collapse text-sm">
+          <caption class="text-left font-bold text-slate-800 p-4 border-b border-slate-200 bg-slate-50/50">
+            Motivaciones de los emprendedores TEA, 2025
+          </caption>
+          <thead>
+            <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+              <th class="py-3 px-4 font-bold">Motivación (TEA, 2025)</th>
+              <th class="py-3 px-4 font-bold">Ecuador</th>
+              <th class="py-3 px-4 font-bold">Promedio regional</th>
+              <th class="py-3 px-4 font-bold">Diferencia</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr class="hover:bg-rose-50/40">
+              <td class="py-3 px-4 font-medium text-slate-900">Ganarse la vida porque los empleos son escasos</td>
+              <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">91,50</td>
+              <td class="py-3 px-4 font-mono tabular-nums text-slate-600">82,35</td>
+              <td class="py-3 px-4 font-mono font-bold tabular-nums text-emerald-700">+9,15</td>
+            </tr>
+            <tr class="hover:bg-amber-50/40">
+              <td class="py-3 px-4 font-medium text-slate-900">Generar una gran riqueza o ingresos muy altos</td>
+              <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">59,23</td>
+              <td class="py-3 px-4 font-mono tabular-nums text-slate-600">59,17</td>
+              <td class="py-3 px-4 font-mono font-bold tabular-nums text-emerald-700">+0,06</td>
+            </tr>
+            <tr class="hover:bg-sky-50/40">
+              <td class="py-3 px-4 font-medium text-slate-900">Marcar la diferencia en el mundo</td>
+              <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">51,14</td>
+              <td class="py-3 px-4 font-mono tabular-nums text-slate-600">58,40</td>
+              <td class="py-3 px-4 font-mono font-bold tabular-nums text-rose-700">−7,26</td>
+            </tr>
+            <tr class="hover:bg-purple-50/40">
+              <td class="py-3 px-4 font-medium text-slate-900">Continuar una tradición familiar</td>
+              <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">43,11</td>
+              <td class="py-3 px-4 font-mono tabular-nums text-slate-600">39,08</td>
+              <td class="py-3 px-4 font-mono font-bold tabular-nums text-emerald-700">+4,03</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 italic mt-2">
+        Cifras en porcentaje de emprendedores TEA. La diferencia es un cálculo propio.
+      </p>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="s3" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 3</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          3. Lectura de cada motivación
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-[#FFF1F2] border border-rose-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-rose-200 text-rose-900">Sección 3.1</span>
+            <span class="font-mono font-extrabold text-xl text-rose-950 tabular-nums">91,50 %</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">3.1 Necesidad (91,50 %)</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Es la motivación principal y la más alta de la región, frente al 82,35 % regional. Según el informe, el impulsor principal para crear empresas es la falta de empleo formal o la insuficiencia de los ingresos.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#FEF3C7] border border-amber-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-amber-200 text-amber-900">Sección 3.2</span>
+            <span class="font-mono font-extrabold text-xl text-amber-950 tabular-nums">59,23 %</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">3.2 Riqueza (59,23 %)</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Casi igual al promedio regional. El informe indica que la necesidad es el detonante, pero existe la aspiración de convertir un negocio de subsistencia en uno rentable, lo que sería una oportunidad potencial.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#E0F2FE] border border-sky-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-sky-200 text-sky-900">Sección 3.3</span>
+            <span class="font-mono font-extrabold text-xl text-sky-950 tabular-nums">51,14 %</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">3.3 Marcar la diferencia (51,14 %)</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Queda 7,26 puntos por debajo de la región. El informe lee esto como que el ecosistema ecuatoriano prioriza la funcionalidad económica inmediata sobre los modelos con propósito social o ambiental explícito.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#F3E8FF] border border-purple-200 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-purple-200 text-purple-900">Sección 3.4</span>
+            <span class="font-mono font-extrabold text-xl text-purple-950 tabular-nums">43,11 %</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">3.4 Tradición familiar (43,11 %)</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Supera al 39,08 % regional. Según el informe, indica un refugio en modelos de legado ante la incertidumbre.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="s4" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 4</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          4. Evolución entre 2024 y 2025 (p. 28)
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+                <th class="py-3 px-4 font-bold">Motivación (TEA Ecuador)</th>
+                <th class="py-3 px-4 font-bold">2024</th>
+                <th class="py-3 px-4 font-bold">2025</th>
+                <th class="py-3 px-4 font-bold">Cambio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-emerald-50/40">
+                <td class="py-3 px-4 font-medium text-slate-900">Ganarse la vida (necesidad)</td>
+                <td class="py-3 px-4 font-mono tabular-nums text-slate-700">90,55</td>
+                <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">91,50</td>
+                <td class="py-3 px-4 font-bold text-emerald-700">Sube</td>
+              </tr>
+              <tr class="hover:bg-rose-50/40">
+                <td class="py-3 px-4 font-medium text-slate-900">Marcar la diferencia</td>
+                <td class="py-3 px-4 font-mono tabular-nums text-slate-700">55,10</td>
+                <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">51,14</td>
+                <td class="py-3 px-4 font-bold text-rose-700">Baja</td>
+              </tr>
+              <tr class="hover:bg-emerald-50/40">
+                <td class="py-3 px-4 font-medium text-slate-900">Continuar tradición familiar</td>
+                <td class="py-3 px-4 font-mono tabular-nums text-slate-700">alrededor de 37</td>
+                <td class="py-3 px-4 font-mono font-semibold tabular-nums text-slate-900">43,11</td>
+                <td class="py-3 px-4 font-bold text-emerald-700">Sube</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs text-slate-500 italic bg-amber-50/60 p-3 rounded-xl border border-amber-200/60">
+          El informe da 37,10 % en la página 27 y 37,12 % en la 28 para la tradición familiar de 2024; por eso se usa “alrededor de 37 %”.
+        </p>
+
+        <ul class="space-y-2 text-sm text-slate-700 p-4 rounded-xl bg-white border border-slate-200">
+          <li><strong>Idea central:</strong> las motivaciones ligadas a la oportunidad descendieron mientras crecieron la necesidad y el legado familiar.</li>
+          <li><strong>Apoyo del informe anterior</strong> (GEM 2024/2025, p. 40): en 2024 la necesidad ya era la principal en todas las etapas, con 92,16 % en negocios nuevos y 90,25 % en establecidos, y la tradición familiar tenía los porcentajes más bajos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="s5" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 5</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          5. Etapa del negocio: TEA frente a establecidos (Tabla 8, p. 28)
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+              <th class="py-3 px-4 font-bold">Motivación</th>
+              <th class="py-3 px-4 font-bold">TEA Ecuador</th>
+              <th class="py-3 px-4 font-bold">Establecidos Ecuador</th>
+              <th class="py-3 px-4 font-bold">Cambio Ecuador</th>
+              <th class="py-3 px-4 font-bold">Cambio región</th>
+              <th class="py-3 px-4 font-bold">Establecidos región</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Ganarse la vida</td>
+              <td class="py-3 px-4 font-mono">91,50</td>
+              <td class="py-3 px-4 font-mono">90,82</td>
+              <td class="py-3 px-4 font-mono font-bold text-rose-700">−0,68</td>
+              <td class="py-3 px-4 font-mono">−1,33</td>
+              <td class="py-3 px-4 font-mono">81,02</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Generar riqueza</td>
+              <td class="py-3 px-4 font-mono">59,23</td>
+              <td class="py-3 px-4 font-mono">47,87</td>
+              <td class="py-3 px-4 font-mono font-bold text-rose-700">−11,36</td>
+              <td class="py-3 px-4 font-mono">−4,04</td>
+              <td class="py-3 px-4 font-mono">55,13</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Marcar la diferencia</td>
+              <td class="py-3 px-4 font-mono">51,14</td>
+              <td class="py-3 px-4 font-mono">44,27</td>
+              <td class="py-3 px-4 font-mono font-bold text-rose-700">−6,87</td>
+              <td class="py-3 px-4 font-mono">−5,26</td>
+              <td class="py-3 px-4 font-mono">53,14</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Tradición familiar</td>
+              <td class="py-3 px-4 font-mono">43,11</td>
+              <td class="py-3 px-4 font-mono">55,39</td>
+              <td class="py-3 px-4 font-mono font-bold text-emerald-700">+12,28</td>
+              <td class="py-3 px-4 font-mono">+8,74</td>
+              <td class="py-3 px-4 font-mono">47,82</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-500 italic mt-2">
+        Los cambios son puntos porcentuales de TEA a establecidos. Los de riqueza (−11,36) y marcar la diferencia (−6,87) en Ecuador coinciden con lo que cita el informe; los demás son cálculo propio.
+      </p>
+
+      <ul class="space-y-1.5 text-sm text-slate-700 mt-4 p-4 rounded-xl bg-purple-50/40 border border-purple-200">
+        <li>• A medida que el negocio madura, en Ecuador baja la aspiración de riqueza y de impacto social.</li>
+        <li>• La tradición familiar es la única motivación que sube de forma marcada entre los establecidos (55,39 %).</li>
+        <li>• En riqueza, los establecidos ecuatorianos (47,87 %) quedan por debajo de los de la región (55,13 %). Según el informe, la estabilidad prevalece sobre la ambición de expansión.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="s6" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 6</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          6. Motivaciones según la edad (sección 2.3.2, pp. 30–31)
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+              <th class="py-3 px-4 font-bold sm:w-1/4">Grupo de edad</th>
+              <th class="py-3 px-4 font-bold">Qué dice el informe</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900 whitespace-nowrap align-top">18 a 24 años</td>
+              <td class="py-3 px-4 text-slate-700 leading-relaxed align-top">22,48 % busca marcar la diferencia y 23,33 % emprende por escasez de empleo. En 2024 este grupo era más idealista; la crisis del mercado laboral juvenil lo empujó hacia el emprendimiento de supervivencia.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900 whitespace-nowrap align-top">25 a 34 años</td>
+              <td class="py-3 px-4 text-slate-700 leading-relaxed align-top">Es el más ambicioso: lidera generar riqueza (33,99 %) y marcar la diferencia (33,92 %), pero también tiene la mayor presión por falta de empleo (33,74 %).</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900 whitespace-nowrap align-top">35 a 44 años</td>
+              <td class="py-3 px-4 text-slate-700 leading-relaxed align-top">Presenta equilibrio: 23,61 % por impacto social y 23,29 % por generar riqueza. La motivación de subsistencia empieza a declinar.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900 whitespace-nowrap align-top">55 a 64 años</td>
+              <td class="py-3 px-4 text-slate-700 leading-relaxed align-top">La motivación predominante es ganarse la vida (8,17 %), con impacto social (7,25 %) y riqueza (7,21 %). El informe lo vincula con la fragilidad de las redes de seguridad social.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 italic mt-2">
+        Estas cifras aparecen solo en el texto del informe, así que se citan tal como están escritas.
+      </p>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="s7" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 7</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          7. Ejemplo real ecuatoriano: La Divina Papaya
+        </h2>
+        <p class="text-xs text-slate-600 mt-1">
+          El propio informe presenta este caso (Amaya et al., 2026, pp. 56–59), así que la fuente es la misma que usamos para los datos.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-100/90 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+                <th class="py-3 px-4 font-bold w-1/3">Campo</th>
+                <th class="py-3 px-4 font-bold">Información</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Emprendimiento</td>
+                <td class="py-3 px-4">La Divina Papaya, liderado por Natalia Wray y sus hijas Daniela y Violeta Moreno Wray.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Qué hace y dónde opera</td>
+                <td class="py-3 px-4">Empresa dirigida por mujeres en la zona de Cayambe, en la región andina. Convierte plantas y flores comestibles en alimentos funcionales: tés e infusiones, sazonadores, sales aromatizadas, toppings florales, chocolates y frutas deshidratadas.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Motivo por el que empezó</td>
+                <td class="py-3 px-4">En 2019 se preguntaron cuál sería el mejor destino para la tierra heredada y decidieron convertir esa inquietud en una oportunidad. Las fundadoras no venían del mundo empresarial: Natalia es antropóloga y sus hijas vienen de disciplinas artísticas.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Motivación del GEM con la que se relaciona</td>
+                <td class="py-3 px-4">Marcar la diferencia en el mundo y continuar una tradición familiar (la tierra heredada). Esta relación es una interpretación del grupo; el informe no clasifica el caso.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Dato del informe que ilustra</td>
+                <td class="py-3 px-4">Marcar la diferencia: 51,14 % en Ecuador frente a 58,40 % en la región. Tradición familiar: 43,11 %.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Otros datos útiles</td>
+                <td class="py-3 px-4">En 2021 obtuvo la certificación Empresa BIC. La inversión inicial vino de fondos familiares y luego de capital semilla, incluidos USD 3.500 de un programa para mujeres y USD 45.000 del Programa Mundial de Alimentos.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Desafío que muestra</td>
+                <td class="py-3 px-4">Las ventas al extranjero han sido esporádicas por falta de instrumentos y oportunidades para exportar, y el acceso a financiación es difícil para emprendimientos rurales liderados por mujeres.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Fuente</td>
+                <td class="py-3 px-4 font-mono text-xs">Amaya et al. (2026), pp. 56–59</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-amber-50 border border-amber-200 space-y-2">
+            <h3 class="font-bold text-amber-950 text-base">Por qué sirve para el tema</h3>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Es un contraste frente al 91,50 % que emprende por necesidad. Muestra un negocio nacido de una motivación de propósito y de legado, que es justo el tipo de motivación que el informe dice que pierde peso en Ecuador.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-purple-50 border border-purple-200 space-y-2">
+            <h3 class="font-bold text-purple-950 text-base">Cómo escribirlo en el trabajo</h3>
+            <blockquote class="p-3 rounded-xl bg-white/80 border-l-3 border-purple-400 text-xs sm:text-sm text-slate-800 italic leading-relaxed">
+              "Frente al 91,50 % que emprende por necesidad, hay casos como La Divina Papaya, en Cayambe. Natalia Wray y sus hijas decidieron en 2019 dar un nuevo uso a la tierra heredada y crearon una empresa de alimentos funcionales con flores comestibles, certificada como Empresa BIC desde 2021 (Amaya et al., 2026). Su historia ilustra la motivación de marcar la diferencia, que en Ecuador llega a 51,14 %, por debajo del 58,40 % regional."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="s8" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 8</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          8. Implicaciones
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-5 rounded-2xl bg-orange-50 border border-orange-200 space-y-2">
+          <strong class="text-orange-950 block text-sm">Para quien emprende:</strong>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            La mayoría lo hace por falta de empleo, así que el negocio suele nacer sin una oportunidad de mercado identificada.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-purple-50 border border-purple-200 space-y-2">
+          <strong class="text-purple-950 block text-sm">Para la continuidad de los negocios:</strong>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Los que se consolidan dependen más del legado familiar que de la ambición de crecer.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-teal-50 border border-teal-200 space-y-2">
+          <strong class="text-teal-950 block text-sm">Para la política pública y el ecosistema:</strong>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            El reto es acompañar a los emprendimientos de necesidad para que pasen de subsistir a crecer.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-500 italic mt-3">
+        Esta sección es reflexión del grupo y se puede contrastar con la sección 5 del informe (pp. 75–80).
+      </p>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="s9" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 9</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          9. Conclusión
+        </h2>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-gradient-to-r from-rose-100/70 via-purple-100/60 to-sky-100/70 border border-purple-200">
+        <p class="text-base sm:text-xl text-slate-900 font-editorial leading-relaxed font-medium">
+          "En Ecuador se emprende sobre todo por necesidad (91,50 %). Entre 2024 y 2025 el impacto social perdió peso mientras creció el legado familiar. Y al madurar el negocio baja la aspiración de riqueza."
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="s10" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 10</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          10. Versión corta para publicar
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+              <th class="py-3 px-4 font-bold w-1/4">Parte</th>
+              <th class="py-3 px-4 font-bold">Contenido</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Título</td>
+              <td class="py-3 px-4">Motivaciones para emprender (el de este esquema)</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Dato de apertura</td>
+              <td class="py-3 px-4">91,50 % de los emprendedores TEA emprende por necesidad, la cifra más alta de la región</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Desarrollo</td>
+              <td class="py-3 px-4">Tres puntos: necesidad frente a la región (sección 3), cambio 2024–2025 (sección 4) y qué pasa con los negocios establecidos (sección 5)</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Ejemplo</td>
+              <td class="py-3 px-4">La Divina Papaya (sección 7) en dos o tres líneas</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Cierre</td>
+              <td class="py-3 px-4">Una implicación de la sección 8</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Fuente</td>
+              <td class="py-3 px-4">Amaya et al. (2026), con la página</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 italic mt-2">
+        La extensión depende de lo que pida el profesor; conviene ajustarla al formato que indique.
+      </p>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="s11" class="scroll-mt-24">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 11</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          11. Lista de verificación de datos
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs bg-white">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase tracking-wider border-b border-slate-200">
+              <th class="py-3 px-4 font-bold">Dato</th>
+              <th class="py-3 px-4 font-bold">Valor</th>
+              <th class="py-3 px-4 font-bold">Fuente y página</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Necesidad, TEA Ecuador 2025</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">91,50 %</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), p. 27</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Necesidad, promedio regional</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">82,35 %</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), p. 27</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Riqueza, TEA Ecuador</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">59,23 %</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), p. 27</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Marcar la diferencia, 2024 y 2025</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">55,10 % y 51,14 %</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), p. 28</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Tradición familiar, 2025</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">43,11 %</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), p. 27</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Datos de establecidos</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">Tabla 8</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), p. 28</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Necesidad 2024</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">90,55 %</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Espinosa et al. (2025), p. 40</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-semibold text-slate-900">Caso La Divina Papaya</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-950">Empresa BIC desde 2021</td>
+              <td class="py-3 px-4 text-slate-600 text-xs">Amaya et al. (2026), pp. 56–59</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 12: Encuesta Interactiva -->
+    <section id="s12" class="scroll-mt-24 space-y-8">
+      <div class="mb-6 pb-3 border-b border-rose-200/60">
+        <span class="text-xs font-bold tracking-wider text-purple-700 uppercase">Capítulo 12</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-editorial mt-0.5">
+          12. Encuesta de necesidades de capacitación para emprendedores
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          Además del informe GEM, el grupo preparó una encuesta con 12 preguntas para conocer en qué áreas necesitan capacitación los emprendedores según la etapa de su negocio.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-purple-50/70 border border-purple-200">
+        <h3 class="font-bold text-slate-900 text-base mb-1">12.1 Propósito de la encuesta</h3>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          La encuesta busca conocer los conocimientos y las necesidades de los emprendedores en la gestión de su negocio, para identificar oportunidades de mejora y desarrollar capacitaciones que contribuyan a su crecimiento. Tiene 12 preguntas obligatorias en dos secciones: datos de la persona y conocimientos y necesidades de capacitación.
+        </p>
+      </div>
+
+      <!-- Survey Form Simulator -->
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+          <div class="space-y-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-800">Simulador de Encuesta</span>
+            <h4 class="text-lg font-bold text-slate-900">Formulario Interactivo (12 Preguntas)</h4>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="fillSampleSurvey()" class="px-3 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 text-xs font-bold transition-colors">
+              ✨ Ejemplo rápido
+            </button>
+            <button onclick="evaluateSurvey()" class="px-5 py-2 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold transition-colors shadow-xs">
+              🎓 Evaluar Perfil
+            </button>
+          </div>
+        </div>
+
+        <!-- 12.2 Datos de la persona -->
+        <div class="space-y-4">
+          <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">12.2 Datos de la persona encuestada</h5>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <span class="text-xs font-bold text-slate-700">Género:</span>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <button type="button" onclick="selectGender('Masculino', this)" class="btn-gender p-2 rounded-lg border bg-white border-slate-200 text-slate-700">Masculino</button>
+                <button type="button" onclick="selectGender('Femenino', this)" class="btn-gender p-2 rounded-lg border bg-white border-slate-200 text-slate-700">Femenino</button>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <span class="text-xs font-bold text-slate-700">Edad:</span>
+              <div class="grid grid-cols-4 gap-1 text-xs">
+                <button type="button" onclick="selectAge('18-24', this)" class="btn-age p-2 rounded-lg border bg-white border-slate-200 text-slate-700">18-24</button>
+                <button type="button" onclick="selectAge('25-35', this)" class="btn-age p-2 rounded-lg border bg-white border-slate-200 text-slate-700">25-35</button>
+                <button type="button" onclick="selectAge('36-46', this)" class="btn-age p-2 rounded-lg border bg-white border-slate-200 text-slate-700">36-46</button>
+                <button type="button" onclick="selectAge('47-55', this)" class="btn-age p-2 rounded-lg border bg-white border-slate-200 text-slate-700">47-55</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pregunta 1 -->
+          <div class="p-4 rounded-xl bg-purple-50/50 border border-purple-200 space-y-2">
+            <span class="text-xs font-bold text-purple-900">1. ¿En qué etapa se encuentra actualmente su emprendimiento?</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+              <button type="button" onclick="selectStage('Naciente', this)" class="btn-stage p-3 rounded-lg border bg-white border-slate-200 text-left">
+                <strong>Naciente:</strong> Tengo una idea o estoy comenzando.
+              </button>
+              <button type="button" onclick="selectStage('Nuevo', this)" class="btn-stage p-3 rounded-lg border bg-white border-slate-200 text-left">
+                <strong>Nuevo:</strong> Ya funciona pero con poco tiempo.
+              </button>
+              <button type="button" onclick="selectStage('Establecido', this)" class="btn-stage p-3 rounded-lg border bg-white border-slate-200 text-left">
+                <strong>Establecido:</strong> Lleva varios años funcionando.
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12.3 Preguntas de capacitación clave -->
+        <div class="space-y-4 pt-2">
+          <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">12.3 Conocimientos y necesidades de capacitación</h5>
+          
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+            <span class="font-bold text-slate-900">2. ¿Cuál es su principal dificultad en la etapa actual?</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <button type="button" onclick="selectGeneric(this, 'btn-q2')" class="btn-q2 p-2.5 rounded-lg border bg-white text-left">Convertir mi idea en un negocio</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q2')" class="btn-q2 p-2.5 rounded-lg border bg-white text-left">Conseguir mis primeros clientes y generar ventas</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q2')" class="btn-q2 p-2.5 rounded-lg border bg-white text-left">Mantener y hacer crecer mi negocio</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q2')" class="btn-q2 p-2.5 rounded-lg border bg-white text-left">Mejorar la administración y rentabilidad</button>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+            <span class="font-bold text-slate-900">10. ¿En qué temas considera más urgente recibir capacitación?</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <button type="button" onclick="selectGeneric(this, 'btn-q10')" class="btn-q10 p-2.5 rounded-lg border bg-white text-left">Creación y planificación del negocio</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q10')" class="btn-q10 p-2.5 rounded-lg border bg-white text-left">Estrategias para conseguir los primeros clientes</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q10')" class="btn-q10 p-2.5 rounded-lg border bg-white text-left">Marketing digital y aumento de ventas</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q10')" class="btn-q10 p-2.5 rounded-lg border bg-white text-left">Administración financiera y control de costos</button>
+              <button type="button" onclick="selectGeneric(this, 'btn-q10')" class="btn-q10 p-2.5 rounded-lg border bg-white text-left">Expansión, crecimiento y sostenibilidad</button>
+            </div>
+          </div>
+
+          <div class="text-center pt-2">
+            <button onclick="evaluateSurvey()" class="px-6 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs shadow-md transition-all">
+              🎓 Ver Diagnóstico Pedagógico Completo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12.4 Relación con el GEM -->
+      <div class="p-5 rounded-2xl bg-[#FAF5FF] border border-purple-200 space-y-3">
+        <h4 class="font-bold text-purple-950 text-base">12.4 Relación con el informe GEM Ecuador 2025</h4>
+        <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+          <li>• <strong>Etapa del negocio:</strong> La pregunta 1 usa tres etapas (naciente, nuevo y establecido), que se relacionan con la comparación entre emprendedores TEA y establecidos de la sección 5.</li>
+          <li>• <strong>Grupos de edad:</strong> La encuesta usa rangos propios (18-24, 25-35, 36-46 y 47-55), distintos a los del informe (18-24, 25-34, 35-44 y 55-64), por lo que las edades no se pueden comparar una a una con la sección 6.</li>
+          <li>• <strong>Necesidad de capacitación:</strong> El informe muestra que la mayoría emprende por necesidad y sin una oportunidad de mercado identificada (sección 8). La encuesta busca saber en qué áreas esos emprendedores necesitan formación para pasar de subsistir a crecer.</li>
+        </ul>
+        <p class="text-xs text-slate-500 italic mt-2">
+          Esta sección es interpretación del grupo. La encuesta no tiene resultados todavía, por eso solo se presenta su estructura.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-rose-200/60 bg-gradient-to-b from-[#FAF9F6] to-[#FFF5F5] py-12 text-slate-600 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200/60">
+        <div>
+          <strong class="text-slate-900 block font-bold text-base">Motivaciones para emprender</strong>
+          <span class="text-slate-500 text-xs">Diseño y Evaluación de Proyectos · Grupo 2</span>
+        </div>
+        <div>
+          <a href="#" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-slate-900 text-xs font-semibold">
+            Subir al inicio ↑
+          </a>
+        </div>
+      </div>
+      <div class="text-xs text-slate-600 space-y-2">
+        <p><strong>Integrantes Grupo 2:</strong> Geovanna Loor, Eliannys Carrillo, Dester Maliza, Maverick Plazarte, Alisson Robles, Annette Valeriano, Noemi Yautibug</p>
+        <p class="text-slate-500"><strong>Fuentes:</strong> Amaya et al. (2026), informe GEM Ecuador 2025; Espinosa et al. (2025), informe GEM 2024/2025; formulario del Grupo 2 “Identificación de necesidades de capacitación para emprendedores” (Formularios de Google).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Centered Diagnostic Evaluation Modal -->
+  <div id="diagnosticModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/75 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-purple-200 overflow-hidden my-6">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-purple-100 bg-gradient-to-r from-purple-100 via-rose-50 to-amber-50">
+        <div class="flex items-center gap-2">
+          <span class="p-2 rounded-xl bg-purple-700 text-white font-bold text-sm">🎓</span>
+          <h4 class="text-lg font-bold text-slate-900 font-editorial">Diagnóstico de Capacitación para el Emprendedor</h4>
+        </div>
+        <button onclick="closeDiagnosticModal()" class="text-slate-500 hover:text-slate-800 font-bold px-2 py-1">✕</button>
+      </div>
+
+      <div class="p-6 space-y-4 text-xs sm:text-sm text-slate-700">
+        <div id="diagProfileBox" class="p-4 rounded-xl bg-purple-50/70 border border-purple-200">
+          <strong class="text-purple-950 block mb-1">Perfil Registrado:</strong>
+          <span id="diagProfileText">Femenino · 25-35 años · Etapa Naciente</span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-200 space-y-1">
+          <strong class="text-amber-950 block">Conexión con el informe GEM Ecuador 2025:</strong>
+          <p>
+            El <strong>91,50 %</strong> de los ecuatorianos inician por necesidad económica y escasez de empleo. Tu perfil requiere una ruta urgente de capacitación técnica para no quedar atrapado en la subsistencia y convertir la idea en un modelo de negocio rentable y sostenible.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 space-y-1">
+          <strong class="text-emerald-950 block">Ruta Formativa Prioritaria Recomendada (Grupo 2):</strong>
+          <ul class="list-disc pl-4 space-y-1 text-slate-700">
+            <li><strong>Fijación de costos y precios:</strong> Cálculo real de margen de ganancia.</li>
+            <li><strong>Estrategias de adquisición de clientes:</strong> Validación de mercado y ventas iniciales.</li>
+            <li><strong>Marketing digital:</strong> Posicionamiento en redes sociales sin altos presupuestos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="px-6 py-3 border-t border-slate-200 bg-slate-50 flex justify-end">
+        <button onclick="closeDiagnosticModal()" class="px-5 py-2 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold">
+          Aceptar y Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Slide Deck Presentation Modal -->
+  <div id="presentationModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/85 backdrop-blur-md p-4">
+    <div class="relative w-full max-w-4xl bg-[#FAF9F6] rounded-3xl shadow-2xl border border-white/40 flex flex-col h-[80vh] overflow-hidden">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 bg-white/70">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-purple-800">Modo Presentación · Grupo 2</span>
+        </div>
+        <button onclick="closePresentationModal()" class="text-slate-500 hover:text-slate-800 font-bold text-lg px-2">✕</button>
+      </div>
+
+      <div class="flex-1 p-6 sm:p-10 flex flex-col justify-center text-center space-y-6 overflow-y-auto">
+        <div id="slideContent"></div>
+      </div>
+
+      <div class="flex items-center justify-between px-6 py-4 border-t border-slate-200 bg-white/70">
+        <button onclick="prevSlide()" class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold hover:bg-slate-100">← Anterior</button>
+        <span id="slideIndicator" class="text-xs font-mono font-bold text-slate-500">1 / 4</span>
+        <button onclick="nextSlide()" class="px-4 py-2 rounded-xl bg-purple-600 text-white text-xs font-semibold hover:bg-purple-700">Siguiente →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Interaction Logic -->
+  <script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    let currentGender = 'Femenino';
+    let currentAge = '25-35';
+    let currentStage = 'Naciente';
+
+    function selectGender(val, btn) {
+      currentGender = val;
+      document.querySelectorAll('.btn-gender').forEach(b => b.className = 'btn-gender p-2 rounded-lg border bg-white border-slate-200 text-slate-700');
+      btn.className = 'btn-gender p-2 rounded-lg border bg-rose-200/80 border-rose-400 text-rose-950 font-bold';
+    }
+
+    function selectAge(val, btn) {
+      currentAge = val;
+      document.querySelectorAll('.btn-age').forEach(b => b.className = 'btn-age p-2 rounded-lg border bg-white border-slate-200 text-slate-700');
+      btn.className = 'btn-age p-2 rounded-lg border bg-sky-200/80 border-sky-400 text-sky-950 font-bold';
+    }
+
+    function selectStage(val, btn) {
+      currentStage = val;
+      document.querySelectorAll('.btn-stage').forEach(b => b.className = 'btn-stage p-3 rounded-lg border bg-white border-slate-200 text-left');
+      btn.className = 'btn-stage p-3 rounded-lg border bg-purple-200/80 border-purple-400 text-purple-950 font-bold text-left';
+    }
+
+    function selectGeneric(btn, groupClass) {
+      document.querySelectorAll('.' + groupClass).forEach(b => b.className = groupClass + ' p-2.5 rounded-lg border bg-white text-left');
+      btn.className = groupClass + ' p-2.5 rounded-lg border bg-purple-100 border-purple-300 text-purple-950 font-semibold text-left';
+    }
+
+    function fillSampleSurvey() {
+      const gBtn = document.querySelectorAll('.btn-gender')[1]; // Femenino
+      if (gBtn) selectGender('Femenino', gBtn);
+      const aBtn = document.querySelectorAll('.btn-age')[1]; // 25-35
+      if (aBtn) selectAge('25-35', aBtn);
+      const sBtn = document.querySelectorAll('.btn-stage')[0]; // Naciente
+      if (sBtn) selectStage('Naciente', sBtn);
+
+      const q2 = document.querySelectorAll('.btn-q2')[1];
+      if (q2) selectGeneric(q2, 'btn-q2');
+      const q10 = document.querySelectorAll('.btn-q10')[1];
+      if (q10) selectGeneric(q10, 'btn-q10');
+
+      evaluateSurvey();
+    }
+
+    function evaluateSurvey() {
+      document.getElementById('diagProfileText').innerText = currentGender + ' · ' + currentAge + ' años · Etapa ' + currentStage;
+      const modal = document.getElementById('diagnosticModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeDiagnosticModal() {
+      const modal = document.getElementById('diagnosticModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Presentation logic
+    const slidesData = [
+      {
+        title: "Motivaciones para emprender en Ecuador",
+        sub: "Informe GEM 2025 y Encuesta de Capacitación",
+        body: "<h2 class='text-3xl font-extrabold text-slate-900 font-editorial mb-3'>Motivaciones para emprender</h2><p class='text-slate-600 text-sm max-w-lg mx-auto'>Diseño y Evaluación de Proyectos · Grupo 2: Geovanna Loor, Eliannys Carrillo, Dester Maliza, Maverick Plazarte, Alisson Robles, Annette Valeriano, Noemi Yautibug</p>"
+      },
+      {
+        title: "Datos Clave 2025",
+        sub: "Motivaciones TEA vs Región",
+        body: "<div class='grid grid-cols-2 gap-4 max-w-xl mx-auto text-left'><div class='p-4 rounded-xl bg-rose-50 border border-rose-200'><span class='text-2xl font-bold font-mono text-rose-950'>91,50 %</span><p class='text-xs font-semibold'>Ganarse la vida (necesidad)</p><span class='text-[10px] text-emerald-700 font-bold'>+9,15 vs región</span></div><div class='p-4 rounded-xl bg-amber-50 border border-amber-200'><span class='text-2xl font-bold font-mono text-amber-950'>59,23 %</span><p class='text-xs font-semibold'>Generar riqueza</p><span class='text-[10px] text-emerald-700 font-bold'>+0,06 vs región</span></div><div class='p-4 rounded-xl bg-sky-50 border border-sky-200'><span class='text-2xl font-bold font-mono text-sky-950'>51,14 %</span><p class='text-xs font-semibold'>Marcar la diferencia</p><span class='text-[10px] text-rose-700 font-bold'>−7,26 vs región</span></div><div class='p-4 rounded-xl bg-purple-50 border border-purple-200'><span class='text-2xl font-bold font-mono text-purple-950'>43,11 %</span><p class='text-xs font-semibold'>Tradición familiar</p><span class='text-[10px] text-emerald-700 font-bold'>+4,03 vs región</span></div></div>"
+      },
+      {
+        title: "Caso Real: La Divina Papaya",
+        sub: "Cayambe, Ecuador · Empresa BIC (2021)",
+        body: "<div class='max-w-lg mx-auto p-5 rounded-2xl bg-purple-50/70 border border-purple-200 text-left text-xs sm:text-sm text-slate-700 space-y-2'><strong class='text-base text-purple-950 block font-editorial'>La Divina Papaya (Natalia Wray y sus hijas)</strong><p>Convierte plantas y flores comestibles en alimentos funcionales en Cayambe. Ilustra la motivación de marcar la diferencia (51,14 %) y tradición familiar (tierra heredada) frente al 91,50 % que emprende por necesidad.</p></div>"
+      },
+      {
+        title: "Conclusión y Encuesta de Capacitación",
+        sub: "De subsistir a escalar",
+        body: "<div class='max-w-lg mx-auto p-5 rounded-2xl bg-white border border-slate-200 text-left text-xs sm:text-sm text-slate-800 space-y-2'><blockquote class='italic font-editorial text-base text-slate-900 leading-relaxed'>'En Ecuador se emprende sobre todo por necesidad (91,50 %). Entre 2024 y 2025 el impacto social perdió peso mientras creció el legado familiar. Y al madurar el negocio baja la aspiración de riqueza.'</blockquote><p class='text-xs text-slate-600 pt-2 border-t'>La encuesta de 12 preguntas del Grupo 2 busca estructurar capacitaciones en fijación de precios, control de costos y captación de clientes.</p></div>"
+      }
+    ];
+
+    let currentSlideIdx = 0;
+
+    function renderSlide() {
+      const s = slidesData[currentSlideIdx];
+      document.getElementById('slideContent').innerHTML = `
+        <span class="text-xs font-bold uppercase tracking-wider text-purple-700">${s.title} · ${s.sub}</span>
+        <div class="mt-4">${s.body}</div>
+      `;
+      document.getElementById('slideIndicator').innerText = (currentSlideIdx + 1) + ' / ' + slidesData.length;
+    }
+
+    function openPresentationModal() {
+      currentSlideIdx = 0;
+      renderSlide();
+      const modal = document.getElementById('presentationModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePresentationModal() {
+      const modal = document.getElementById('presentationModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function nextSlide() {
+      if (currentSlideIdx < slidesData.length - 1) {
+        currentSlideIdx++;
+        renderSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlideIdx > 0) {
+        currentSlideIdx--;
+        renderSlide();
+      }
+    }
+  </script>
+</body>
+</html>
